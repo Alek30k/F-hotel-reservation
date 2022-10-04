@@ -15,7 +15,27 @@
 }
 
 .logo {
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.avatar {
+  position: absolute;
+  right: 280px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.option {
+  z-index: 2;
+  position: absolute;
+  width: 100px;
+  top: 35px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
 }
 
 .navButton {
@@ -24,4 +44,5 @@
   padding: 5px 10px;
   cursor: pointer;
   color: #05449b;
+  border-radius: 5px;
 }

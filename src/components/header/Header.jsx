@@ -93,7 +93,7 @@ const Header = ({ type }) => {
               more with a free ArC.booking account
             </p>
             {!user && <button className="headerBtn">Sign in / Register</button>}
-            <div className="headerSearch">
+            <div className="headerSearch border">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
