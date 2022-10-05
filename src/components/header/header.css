@@ -26,12 +26,16 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
 .headerListItem.active {
   border: 1px solid white;
   padding: 10px;
   border-radius: 20px;
+}
+.headerListItem.active:hover {
+  transform: scale(1.1);
 }
 
 .headerDesc {
