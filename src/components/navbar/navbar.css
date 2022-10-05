@@ -22,8 +22,21 @@
 .avatar {
   position: absolute;
   right: 280px;
-  font-weight: 700;
+  font-weight: 500;
   cursor: pointer;
+}
+
+.img-avatar {
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.acontainer {
+  display: flex;
+  align-items: center;
 }
 
 .option {
@@ -45,4 +58,20 @@
   cursor: pointer;
   color: #05449b;
   border-radius: 5px;
+}
+
+.admin {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.admin:hover {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: pointer;
 }

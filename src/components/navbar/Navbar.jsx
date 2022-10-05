@@ -2,12 +2,13 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+
 const Navbar = () => {
   const { user } = useContext(AuthContext);
   const [openOptions, setOpenOptions] = useState(false);
 
   const { dispatch } = useContext(AuthContext);
-
+  console.log(user);
   const handleClick = async (e) => {
     dispatch({ type: "LOGOUT" });
   };
@@ -21,7 +22,14 @@ const Navbar = () => {
         <div className="avatar">
           {user ? (
             <div onClick={() => setOpenOptions(!openOptions)}>
-              {user.username}
+              <div className="acontainer">
+                {user.username}
+                <img
+                  src={user.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"}
+                  className="img-avatar"
+                />
+              </div>
+
               {openOptions && (
                 <div className="option">
                   <div onClick={handleClick} className="optionItem">
@@ -41,6 +49,11 @@ const Navbar = () => {
             </div>
           )}
         </div>
+        {/* <Link to="/">
+          <button className="navButton">Admin</button>
+        </Link> */}
+
+        <button className="admin">Dashboard</button>
       </div>
     </div>
   );
