@@ -52,7 +52,11 @@ const Navbar = () => {
           )}
         </div>
 
-        {user?._doc.isAdmin && <button className="admin">Dashboard</button>}
+        {user?._doc.isAdmin && (
+          // <Link to="/admin">
+          <button className="admin">Dashboard</button>
+          // </Link>
+        )}
       </div>
     </div>
   );
