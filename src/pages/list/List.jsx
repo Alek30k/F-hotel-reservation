@@ -27,6 +27,9 @@ const List = () => {
     reFetch();
   };
 
+  if (loading) return <h2>Loading...</h2>;
+  if (!data) return <h2>No hay hoteles</h2>;
+
   return (
     <div>
       <Navbar />
@@ -112,7 +115,7 @@ const List = () => {
               "loading"
             ) : (
               <>
-                {data.map((item) => (
+                {data?.map((item) => (
                   <SearchItem item={item} key={item._id} />
                 ))}
               </>
