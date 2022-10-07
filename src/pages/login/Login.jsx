@@ -27,7 +27,7 @@ const Login = () => {
         credentials
       );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
-      navigate("https://b-hotel-reservation.herokuapp.com");
+      navigate("/");
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });
     }
