@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post(
+      const res = await axios.get(
         "https://b-hotel-reservation.herokuapp.com/api/auth/login",
         credentials
       );
