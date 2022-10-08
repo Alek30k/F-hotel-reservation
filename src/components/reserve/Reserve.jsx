@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { data, loading, error } = useFetch(
-    `https://b-hotel-reservation.herokuapp.com/api/hotels/room/${hotelId}`
+    `${process.env.REACT_APP_URL}/hotels/room/${hotelId}`
   );
   const { dates } = useContext(SearchContext);
 
