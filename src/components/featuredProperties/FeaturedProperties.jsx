@@ -6,7 +6,7 @@ const FeaturedProperties = () => {
     `${process.env.HEROKU}/hotels?featured=true&limit=4`
   );
   //"https://b-hotel-reservation.herokuapp.com/api/hotels?featured=true&limit=4"
-  console.log(data);
+  console.log(HEROKU);
 
   if (loading) return <h2>Loading...</h2>;
   if (!data) return <h2>No hay hoteles</h2>;
