@@ -3,7 +3,7 @@ import "./featured.css";
 
 const Featured = () => {
   const { data, loading } = useFetch(
-    "https://b-hotel-reservation.herokupp.com/api/hotels/countByCity?cities=berlin,madrid,london"
+    "/hotels/countByCity?cities=berlin,madrid,london"
   );
 
   return (
