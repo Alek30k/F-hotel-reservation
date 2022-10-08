@@ -24,10 +24,12 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading, error } = useFetch(`/api/hotels/find/${id}`);
+  const { data, loading, error } = useFetch(
+    `https://b-hotel-reservation.herokuapp.com/api/api/hotels/find/${id}`
+  );
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  console.log(">>>>>>>>>>>>>>>>", process.env.URL);
   const { dates, options } = useContext(SearchContext);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
