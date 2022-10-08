@@ -3,7 +3,7 @@ import "./propertyList.css";
 
 const PropertyList = () => {
   const { data, loading, error } = useFetch(
-    "https://b-hotel-reservation.herokupp.com/api//hotels/countByType"
+    "https://b-hotel-reservation.herokupp.com/api/hotels/countByType"
   );
 
   const images = [
