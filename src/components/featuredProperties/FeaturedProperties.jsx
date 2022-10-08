@@ -3,7 +3,7 @@ import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
   const { data, loading } = useFetch(
-    "https://b-hotel-reservation.herokupp.com/api/hotels?featured=true&limit=4"
+    `${process.env.HEROKU}/hotels?featured=true&limit=4`
   );
   //"https://b-hotel-reservation.herokuapp.com/api/hotels?featured=true&limit=4"
   console.log(data);
