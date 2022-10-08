@@ -22,10 +22,7 @@ const Register = () => {
     e.preventDefault();
     dispatch({ type: "REGISTER" });
     try {
-      const res = await axios.post(
-        "https://b-hotel-reservation.herokuapp.com/api/auth/register",
-        credentials
-      );
+      const res = await axios.post("/auth/register", credentials);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/login");
     } catch (err) {
