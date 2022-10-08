@@ -2,9 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch(
-    "https://b-hotel-reservation.herokupp.com/api/hotels?featured=true&limit=4"
-  );
+  const { data, loading } = useFetch("/hotels?featured=true&limit=4");
   console.log(data);
 
   if (loading) return <h2>Loading...</h2>;
