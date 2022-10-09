@@ -23,11 +23,9 @@ const Navbar = () => {
           {user ? (
             <div onClick={() => setOpenOptions(!openOptions)}>
               <div className="acontainer">
-                {user._doc.username}
+                {user.username}
                 <img
-                  src={
-                    user._doc.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"
-                  }
+                  src={user.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"}
                   className="img-avatar"
                 />
               </div>
@@ -52,7 +50,7 @@ const Navbar = () => {
           )}
         </div>
 
-        {user?._doc.isAdmin && (
+        {user?.isAdmin && (
           // <Link to="/admin">
           <button className="admin">Dashboard</button>
           // </Link>
