@@ -50,7 +50,7 @@ const Navbar = () => {
           )}
         </div>
 
-        {user?._doc.isAdmin && (
+        {user?.isAdmin && (
           // <Link to="/admin">
           <button className="admin">Dashboard</button>
           // </Link>
