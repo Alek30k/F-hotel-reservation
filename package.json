@@ -45,5 +45,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://b-hotel-reservation.herokuapp.com/api"
+  "proxy": "https://b-hotel-reservation11-production.up.railway.app/api"
 }
