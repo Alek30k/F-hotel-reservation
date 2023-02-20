@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Reserve = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
   const { data, loading, error } = useFetch(
-    `${process.env.REACT_APP_URL}/hotels/room/${hotelId}`
+    `https://reservation-hotel.onrender.com/api/hotels/room/${hotelId}`
   );
   const { dates } = useContext(SearchContext);
 
@@ -57,9 +57,12 @@ const Reserve = ({ setOpen, hotelId }) => {
     try {
       await Promise.all(
         selectedRooms.map((roomId) => {
-          const res = axios.put(`/rooms/availability/${roomId}`, {
-            dates: alldates,
-          });
+          const res = axios.put(
+            `https://reservation-hotel.onrender.com/api/rooms/availability/${roomId}`,
+            {
+              dates: alldates,
+            }
+          );
           return res.data;
         })
       );

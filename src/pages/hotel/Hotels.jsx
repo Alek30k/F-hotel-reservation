@@ -25,7 +25,7 @@ const Hotel = () => {
   const [openModal, setOpenModal] = useState(false);
 
   const { data, loading, error } = useFetch(
-    `${process.env.REACT_APP_URL}/hotels/find/${id}`
+    `https://reservation-hotel.onrender.com/api/hotels/find/${id}`
   );
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();

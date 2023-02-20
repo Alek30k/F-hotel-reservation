@@ -23,7 +23,7 @@ const Register = () => {
     dispatch({ type: "REGISTER" });
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_URL}/auth/register`,
+        `https://reservation-hotel.onrender.com/api/auth/register`,
         credentials
       );
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });

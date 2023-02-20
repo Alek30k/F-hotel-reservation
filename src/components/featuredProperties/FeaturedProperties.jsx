@@ -3,7 +3,7 @@ import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
   const { data, loading } = useFetch(
-    `${process.env.REACT_APP_URL}/hotels?featured=true&limit=4`
+    `https://reservation-hotel.onrender.com/api/hotels?featured=true&limit=4`
   );
 
   if (loading) return <h2>Loading...</h2>;
